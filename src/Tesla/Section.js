@@ -1,26 +1,32 @@
 import React from 'react'
 
-function Seaction() {
-  return (
-    <div>
-      <>
-      <div className='model'>
-      <h1>Model 3</h1>
-      <p>Order Online for touchless delivery</p>
-      </div>
-      <div className='button'>
-        <a href=''>CUSTOM ORDER</a>
-        </div>
-      <div className='button1'>
-      <a href=''>EXISTING INVENTORY</a>
-      
-      </div>
-      
-      
-       </>
+function Section(props) {
+	return (
+		<>
+			<div className='main' id={props.id}>
+				<div className='carname'>
+					<h1>{props.name}</h1>
+					<p>{props.para}</p>
+				</div>
+				<div className='carbutton'>
+					<div className='button'>
+						<a href="" className='leftbutton'>{props.leftbtn}</a>
+						{
+							props.rightbtn && <a href="" className='rightbutton'>{props.rightbtn}</a>
+						}
 
-    </div>
-  )
+					</div>
+					{
+						props.arrow && <img src="../images/down-arrow.svg" className='arrow' />
+					}
+
+				</div>
+			</div>
+		</>
+	)
 }
 
-export default Seaction
+
+
+
+export default Section

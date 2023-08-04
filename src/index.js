@@ -1,18 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Header from './Tesla/Header'
-import Section from './Tesla/Section'
-import './Tesla/Style.css'
+import Home from './Tesla/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <>
-    <Header/>
-    <Section/>
-  
-
-
+    <Home/>
   </> 
 
 );
